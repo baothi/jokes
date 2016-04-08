@@ -1,0 +1,12 @@
+p#notice = notice
+
+p
+  strong Description:
+  = @joke.description
+p
+  strong Active:
+  = @joke.active
+
+= link_to 'Edit', edit_joke_path(@joke)
+'|
+= link_to 'Back', jokes_path

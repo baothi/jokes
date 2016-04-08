@@ -1,0 +1,20 @@
+h1 Listing jokes
+row
+  table
+    tbody
+      / - @jokes.each do |joke|
+
+	  tr
+        td = @jokes.description
+br
+br
+row
+  .col-md-6
+    = simple_form_for @joke do |f|
+      = f.hidden_field :action, :value => true
+      = f.submit "This is Funny", class: " button btn btn-primary"
+  .col-md-6
+    = simple_form_for @joke do |f|
+      = f.hidden_field :action, :value => false
+      = f.submit "This is no Funny", class: " button btn btn-success"
+  

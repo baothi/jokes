@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Fristname:
+  = @profile.fristname
+p
+  strong Lastname:
+  = @profile.lastname
+p
+  strong Avatar:
+  = @profile.avatar
+
+= link_to 'Edit', edit_profile_path(@profile)
+'|
+= link_to 'Back', profiles_path
